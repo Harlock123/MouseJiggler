@@ -7,7 +7,7 @@
 
 #include <DigiMouse.h>
 unsigned int LowerCycleTime = 10000; //Minimum Time in milli-seconds between each mouse action  Default: 10000 (10 Seconds), Max 65535ms
-unsigned int UpperCycleTime = 20000; //Maximum Time in milli-seconds between each mouse action  Default: 30000 (30 Seconds), Max 65535ms
+unsigned int UpperCycleTime = 20000; //Maximum Time in milli-seconds between each mouse action  Default: 20000 (20 Seconds), Max 65535ms
 //Random Function will randomly execute a mouse move between these two values
 void setup() {
   randomSeed(analogRead(0));  //Random Seed off background noise on analog pin
@@ -17,7 +17,7 @@ void setup() {
   
 }
 void loop() {
-//Moves mouse 1 pixel in a direction (up/down/left/right) in a square
+//Moves mouse 2 pixels in a direction (up/down/left/right) in a square
 
   digitalWrite(1, HIGH);
   DigiMouse.moveY(2);

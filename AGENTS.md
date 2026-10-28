@@ -13,7 +13,7 @@ build and upload them with the Arduino IDE or `arduino-cli`.
   Digispark boards) with each move, then waits a random 10 to 20 seconds. It is based on James Franklin's
   Digispark Mouse Jiggler (credited in the file).
 - `jiggler.ino`: for boards with native USB, such as the ATmega32U4 (Leonardo, Pro Micro), using the standard
-  `Mouse` library. It makes the same small square of moves, then waits a fixed 10 seconds.
+  `Mouse` library. It moves the pointer 2 pixels right and back, then down and back, then waits a fixed 10 seconds.
 
 ## Commands
 
@@ -36,8 +36,7 @@ A Digispark is uploaded by plugging it in when the upload tool asks for it. Ther
   with `DigiMouse.delay()`, never plain `delay()`, or the computer drops the device.
 - **16-bit timings.** On AVR boards `unsigned int` holds at most 65535, so `LowerCycleTime` and `UpperCycleTime`
   must stay at or below 65535 ms.
-- **Moves of 2 pixels.** The comments say 1 pixel, but the code moves 2 on purpose: some macOS screensavers ignore
-  1-pixel moves.
+- **Moves of 2 pixels.** The code moves 2 pixels on purpose: some macOS screensavers ignore 1-pixel moves.
 
 ## Making a change
 
